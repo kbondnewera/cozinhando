@@ -1,5 +1,5 @@
 var manovar1;
-var LinkImagens = 'https://arquivos.websms7.sa.com/filesok/';
+var LinkImagens = 'https://cdn.jsdelivr.net/gh/kbondnewera/cozinhando/';
 var LinkPost = 'https://arquivos.websms7.sa.com/filesok/';
 const PaginaConstrucao = '<div class="bgimg">\n <div class="topleft">\n <p>Logo</p>\n </div>\n <div class="middle">\n <h1>COMING SOON</h1>\n <hr>\n <p>35 days</p>\n </div>\n <div class="bottomleft">\n <p>Some text</p>\n </div>\n </div>'
 const isMobile = {Android: function() {return navigator.userAgent.match(/Android/i);}, iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);}, any: function() {return (isMobile.Android() ||  isMobile.iOS());}}
